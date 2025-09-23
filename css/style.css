@@ -1,0 +1,216 @@
+/* Algemene instellingen */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #6a00f4, #ff4ecd);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Witte topbalk met logo */
+.topbar {
+  background-color: white;
+  color: #6a00f4;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+}
+
+.logo-tekst {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Welkomsttekst op homepage */
+h1 {
+  font-size: 2.5rem;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+/* Hoofdknoppen op homepage */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+}
+
+.hoofdknop {
+  background-color: #00c896;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.hoofdknop:hover {
+  background-color: #009e76;
+}
+
+/* Categorie-overzicht op subpagina’s */
+.categorie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.categorie-kaart {
+  flex: 1 1 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.categorie-kaart:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.categorie-kaart h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Productkaarten zoals monitoren */
+.monitor-kaart {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+  color: white;
+}
+
+.monitor-kaart h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.monitor-kaart p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+/* Zorgverzekeringpagina layout */
+.main-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.sidebar {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+}
+
+.resultaten {
+  flex: 2 1 600px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+}
+
+/* Info-iconen */
+.info-icon {
+  display: inline-block;
+  background-color: white;
+  color: #6a00f4;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 18px;
+  margin-left: 6px;
+  cursor: help;
+}
+
+/* Verzekeringskaarten */
+.verzekering-kaart {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  margin: 1rem 0;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.verzekering-kaart:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.verzekering-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.verzekering-details {
+  display: none;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsiveness voor mobiel */
+@media (max-width: 600px) {
+  .home-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .categorie-grid {
+    flex-direction: column;
+  }
+
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .resultaten {
+    max-width: 100%;
+  }
+}

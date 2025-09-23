@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Virly - Zorgverzekering Vergelijker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Witte topbalk -->
+  <header class="topbar">
+    <div class="logo-container">
+      <img src="img/RC5-Logo.png" alt="Virly logo" class="logo-img" />
+      <span class="logo-tekst">Virly</span>
+    </div>
+  </header>
+
+  <!-- Layout: voorkeuren + resultaten -->
+  <div class="main-layout">
+    <aside class="sidebar">
+      <h2>Jouw voorkeuren</h2>
+      <form id="keuzeForm">
+        <label>
+          Fysio bezoeken per jaar:
+          <input type="number" name="fysio" min="0" max="20" value="6">
+          <span class="info-icon" title="Aantal fysiotherapiebehandelingen dat je verwacht nodig te hebben per jaar.">i</span>
+        </label><br>
+
+        <label>
+          Max maandelijkse kosten (€):
+          <input type="number" name="budget" value="150">
+          <span class="info-icon" title="Wat je maximaal per maand wilt betalen voor je zorgverzekering.">i</span>
+        </label><br>
+
+        <label>
+          <input type="checkbox" name="eigenRisico">
+          Verspreid eigen risico betalen
+          <span class="info-icon" title="Spreid je eigen risico over meerdere maanden in plaats van één keer betalen.">i</span>
+        </label><br>
+
+        <label>
+          <input type="checkbox" name="student">
+          Ik ben student
+          <span class="info-icon" title="Sommige pakketten zijn speciaal afgestemd op studenten.">i</span>
+        </label><br>
+
+        <label>
+          <input type="checkbox" name="anticonceptie">
+          Anticonceptie vanaf 21 jaar
+          <span class="info-icon" title="Vergoeding voor anticonceptie als je ouder bent dan 21.">i</span>
+        </label><br>
+
+        <label>
+          <input type="checkbox" name="buitenland">
+          Spoedeisende hulp in buitenland
+          <span class="info-icon" title="Dekking voor medische hulp tijdens reizen buiten Nederland.">i</span>
+        </label><br>
+
+        <label>
+          <input type="checkbox" name="vaccinaties">
+          Vaccinaties voor buitenland
+          <span class="info-icon" title="Vergoeding voor vaccinaties die je nodig hebt voor reizen.">i</span>
+        </label><br>
+
+        <label>
+          <input type="checkbox" name="bril">
+          Brillen/lenzen vergoeding
+          <span class="info-icon" title="Vergoeding voor brillen, lenzen of contactlenzen.">i</span>
+        </label><br>
+
+        <button type="submit">Toon beste opties</button>
+      </form>
+    </aside>
+
+    <section class="resultaten">
+      <h2>Beste opties voor jou</h2>
+      <label for="sortering">Sorteer op:</label>
+      <select id="sortering">
+        <option value="standaard">Standaard</option>
+        <option value="prijs">Prijs (laag → hoog)</option>
+        <option value="naam">Verzekeraar (A → Z)</option>
+      </select>
+
+      <div id="resultatenLijst">
+        <!-- Voorbeeldpakket -->
+        <div class="verzekering-kaart">
+          <div class="verzekering-header">DSW – Student AV — €15 / maand</div>
+          <div class="verzekering-details">
+            <p>Type: Budget</p>
+            <p>Fysiotherapie: 12 behandelingen</p>
+            <p>Anticonceptie: 100%</p>
+            <p>Tandarts: €250 per jaar</p>
+            <p>Buitenland: 100%</p>
+            <p>Wereldwijd: 100%</p>
+            <p>Eigen risico: €385</p>
+            <p>Bel/termen: Geen vergoeding</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/zorgverzekering.js"></script>
+</body>
+</html>
